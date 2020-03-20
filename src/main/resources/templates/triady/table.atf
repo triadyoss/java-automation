@@ -1,0 +1,5 @@
+---
+moduleId: "${Table.Module.Id}"
+tableName: "${Table.Name}"
+tableDescription: "${Table.Description}"
+tableSchemaFile: "${Table.JsonSchema.Path}"

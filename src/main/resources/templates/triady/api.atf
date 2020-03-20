@@ -1,0 +1,6 @@
+---
+moduleId: "${Api.Module.Id}"
+apiName: "${Api.Name}"
+apiDescription: "${Api.Description}"
+apiSwaggerFile: "${Api.SwaggerFile.Path}"
+apiGraphQLFile: "${Api.GraphQLFile.Path}"
