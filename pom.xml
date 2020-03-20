@@ -22,7 +22,7 @@
 
   <properties>
     <compozitorVersion>0.0.13-SNAPSHOT</compozitorVersion>
-    <jacksonVersion>2.9.8</jacksonVersion>
+    <jacksonVersion>2.10.3</jacksonVersion>
   </properties>
 
   <dependencies>
