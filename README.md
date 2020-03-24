@@ -1,4 +1,8 @@
-# How to use Java Generator
+# Triady Java Automation
+
+Never have a developer portal out-of-date again!
+
+# How to use 
 
 Import dependency to your maven pom
 ```xml
