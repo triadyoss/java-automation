@@ -1,0 +1,9 @@
+---
+moduleId: "${Cache.Module.Id}"
+cacheName: "${Cache.Name}"
+cacheDescription: "${Cache.Description}"
+#if($Cache.schemaBased())
+schemaId: "${Cache.Schema.Id}"
+#else
+schemaFile: "${Cache.JsonSchema.Path}"
+#end

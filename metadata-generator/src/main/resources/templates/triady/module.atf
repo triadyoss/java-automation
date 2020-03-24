@@ -1,0 +1,6 @@
+---
+contextId: "${Module.Context.Id}"
+moduleName: "${Module.Name}"
+moduleDescription: "${Module.Description}"
+moduleConsumesTopics: "${Module.consumesTopics}"
+moduleProducesTopics: "${Module.producesTopics}"

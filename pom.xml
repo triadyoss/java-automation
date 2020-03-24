@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.archmix</groupId>
+    <artifactId>java-parent</artifactId>
+    <version>1.8</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>org.archmix.triady</groupId>
+  <artifactId>java-automation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Triady Automation for Java Developers</name>
+  <description>Never have an out-of-date developer portal again.</description>
+  <url>https://triady.archmix.org</url>
+
+  <properties>
+    <triadyVersion>0.0.1-SNAPSHOT</triadyVersion>
+    <compozitorVersion>0.1.2</compozitorVersion>
+    <jacksonVersion>2.10.3</jacksonVersion>
+  </properties>
+
+  <modules>
+    <module>metadata-generator</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- TRIADY -->
+      <dependency>
+        <groupId>org.archmix.triady</groupId>
+        <artifactId>metadata-generator</artifactId>
+        <version>${triadyVersion}</version>
+      </dependency>
+      <!-- JACKSON -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-jsonSchema</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+
+      <!-- COMPOZITOR -->
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>compozitor-engine</artifactId>
+        <version>${compozitorVersion}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <scm>
+    <connection>scm:git:git://github.com/triadyoss/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/triadyoss/${project.artifactId}.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://github.com/triadyoss</url>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <issueManagement>
+    <system>Github issue tracker</system>
+    <url>https://github.com/triadyoss/${project.artifactId}/issues</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <id>mrbraz</id>
+      <name>Anderson Braz</name>
+      <email>mrbraz@archmix.org</email>
+    </developer>
+  </developers>
+</project>

@@ -1,0 +1,4 @@
+---
+schemaId: "${Topic.Schema.Id}"
+topicName: "${Topic.Name}"
+topicDescription: "${Topic.Description}"
