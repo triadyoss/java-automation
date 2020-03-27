@@ -10,7 +10,7 @@ import compozitor.generator.core.interfaces.TemplateRepository;
 import compozitor.template.core.interfaces.TemplateEngine;
 import triady.generator.context.interfaces.ContextMetadata;
 
-public abstract class SchemaMetadataProcessorPlugins implements TypeModelPlugin<ContextMetadata>, TemplatePlugin {
+public abstract class SchemaMetadataProcessorPlugins implements TypeModelPlugin<SchemaMetadata>, TemplatePlugin {
 
   @Override
   public void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {

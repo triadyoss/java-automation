@@ -11,7 +11,7 @@ import compozitor.template.core.interfaces.TemplateEngine;
 import triady.generator.context.interfaces.ContextMetadata;
 import triady.generator.context.interfaces.ContextMetadataCategory;
 
-public abstract class TopicMetadataProcessorPlugins implements TypeModelPlugin<ContextMetadata>, TemplatePlugin {
+public abstract class TopicMetadataProcessorPlugins implements TypeModelPlugin<TopicMetadata>, TemplatePlugin {
 
   @Override
   public void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
