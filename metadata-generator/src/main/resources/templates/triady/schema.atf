@@ -2,4 +2,4 @@
 contextId: "${Schema.Context.Id}"
 schemaName: "${Schema.Name}"
 schemaDescription: "${Schema.Description}"
-schemaFile: "${Schema.JsonSchema.Path}"
+schemaFile: "${Schema.JsonSchema.Endpoint}"

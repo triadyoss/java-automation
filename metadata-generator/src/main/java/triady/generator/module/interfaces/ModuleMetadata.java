@@ -18,7 +18,7 @@ public class ModuleMetadata extends Metadata<ModuleMetadata> {
   private final ProducesTopics producesTopics;
 
   private ModuleMetadata(ContextMetadata context, Name name, Description description, ConsumesTopics consumesTopics, ProducesTopics producesTopics) {
-    super(Collection.CONTEXT, name, description);
+    super(Collection.MODULE, name, description);
     this.context = context;
     this.consumesTopics = consumesTopics;
     this.producesTopics = producesTopics;

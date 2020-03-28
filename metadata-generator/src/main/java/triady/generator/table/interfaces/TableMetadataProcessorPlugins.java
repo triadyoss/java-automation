@@ -14,7 +14,7 @@ import triady.generator.context.interfaces.ContextMetadataCategory;
 public abstract class TableMetadataProcessorPlugins implements TypeModelPlugin<TableMetadata>, TemplatePlugin {
 
   @Override
-  public void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
+  public final void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
     final TemplateMetadata template = templateRepository.addRegularResourceTemplate();
     template.setTemplate(templateEngine.getTemplate("templates/triady/table.atf"));
     template.setFileName(Filename.create("${Table.Id}.yml"));
@@ -22,7 +22,7 @@ public abstract class TableMetadataProcessorPlugins implements TypeModelPlugin<T
   }
 
   @Override
-  public CodeGenerationCategory category() {
+  public final CodeGenerationCategory category() {
     return TableMetadataCategory.INSTANCE;
   }
 }

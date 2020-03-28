@@ -12,15 +12,19 @@ public class ContextSpecificationProcessorTest {
     final Compilation compilation =
       CompilationBuilder.create()
         .withProcessors(new ContextSpecificationProcessor())
-        .withJavaSource("contextSpecificationProcessorTest/ContextTest.java")
+        .withJavaSource(testFile("ContextTest.java"))
         .build();
 
     Assert.assertEquals(2, compilation.generatedFiles().size());
 
     compilation.generatedFiles().forEach(file -> {
       if(file.getName().contains("yml")){
-        FileAssertion.withResourceFile("/contextSpecificationProcessorTest/context.yml").assertEquals(file);
+        FileAssertion.withResourceFile(testFile("context.yml")).assertEquals(file);
       }
     });
+  }
+
+  public String testFile(String filename){
+    return "contextSpecificationProcessorTest/" + filename;
   }
 }

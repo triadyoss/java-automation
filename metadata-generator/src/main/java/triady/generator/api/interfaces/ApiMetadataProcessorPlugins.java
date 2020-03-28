@@ -14,7 +14,7 @@ import triady.generator.context.interfaces.ContextMetadataCategory;
 public abstract class ApiMetadataProcessorPlugins implements TypeModelPlugin<ApiMetadata>, TemplatePlugin {
 
   @Override
-  public void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
+  public final void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
     final TemplateMetadata template = templateRepository.addRegularResourceTemplate();
     template.setTemplate(templateEngine.getTemplate("templates/triady/api.atf"));
     template.setFileName(Filename.create("${Api.Id}.yml"));
@@ -22,7 +22,7 @@ public abstract class ApiMetadataProcessorPlugins implements TypeModelPlugin<Api
   }
 
   @Override
-  public CodeGenerationCategory category() {
+  public final CodeGenerationCategory category() {
     return ApiMetadataCategory.INSTANCE;
   }
 }

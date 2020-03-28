@@ -17,8 +17,8 @@ public class ContextSpecificationProcessorPlugins extends ContextMetadataProcess
     Predicate<AnnotationModel> specificationPredicate = getSpecificationPredicate(processingContext.getJavaModel());
     AnnotationModel annotationModel = typeModel.getAnnotations().get(specificationPredicate).get();
 
-    Name name = Name.create(annotationModel.getValue("name").getValue().toString());
-    Description description = Description.create(annotationModel.getValue("description").getValue().toString());
+    Name name = Name.create(annotationModel.value("name"));
+    Description description = Description.create(annotationModel.value("description"));
 
     return ContextMetadata.create(name, description);
   }

@@ -14,7 +14,7 @@ import triady.generator.context.interfaces.ContextMetadataCategory;
 public abstract class CacheMetadataProcessorPlugins implements TypeModelPlugin<CacheMetadata>, TemplatePlugin {
 
   @Override
-  public void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
+  public final void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
     final TemplateMetadata template = templateRepository.addRegularResourceTemplate();
     template.setTemplate(templateEngine.getTemplate("templates/triady/cache.atf"));
     template.setFileName(Filename.create("${Cache.Id}.yml"));
@@ -22,7 +22,7 @@ public abstract class CacheMetadataProcessorPlugins implements TypeModelPlugin<C
   }
 
   @Override
-  public CodeGenerationCategory category() {
+  public final CodeGenerationCategory category() {
     return CacheMetadataCategory.INSTANCE;
   }
 }

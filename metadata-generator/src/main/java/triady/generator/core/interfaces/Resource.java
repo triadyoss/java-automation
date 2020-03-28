@@ -12,7 +12,7 @@ public abstract class Resource {
 
   private final Id id;
 
-  protected Path getPath(){
+  public Path getPath(){
     return Paths.get(this.path, this.id.toString());
   }
 }

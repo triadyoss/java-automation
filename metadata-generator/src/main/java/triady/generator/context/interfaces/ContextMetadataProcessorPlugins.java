@@ -20,7 +20,7 @@ public abstract class ContextMetadataProcessorPlugins implements TypeModelPlugin
   }
 
   @Override
-  public CodeGenerationCategory category() {
+  public final CodeGenerationCategory category() {
     return ContextMetadataCategory.INSTANCE;
   }
 }

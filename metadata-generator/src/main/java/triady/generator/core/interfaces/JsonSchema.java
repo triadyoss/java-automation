@@ -15,30 +15,36 @@ public class JsonSchema extends Resource {
   private static final Path PATH = Paths.get(TriadySettings.DATA_DIRECTORY, "json-schemas/");
 
   @Getter
-  private final String content;
+  private final String targetClassName;
 
-  private JsonSchema(Id id, String content) {
+  private JsonSchema(Id id, String targetClassName) {
     super(PATH.toString(), id);
-    this.content = content;
+    this.targetClassName = targetClassName;
   }
 
   public static JsonSchema create(TypeModel typeModel){
     Id id = Id.create(typeModel.getQualifiedName());
-    return new JsonSchema(id, jsonSchema(typeModel));
+    return new JsonSchema(id, typeModel.getQualifiedName());
+  }
+
+  public Path getEndpoint() {
+    String endpoint = this.getPath().toString().replace("src", "");
+    return Paths.get(endpoint);
   }
 
   public void write(){
     try {
       Path path = this.getPath();
-      Files.write(path, this.content.getBytes());
+      String content = jsonSchema();
+      Files.write(path, content.getBytes());
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
   }
 
-  private static String jsonSchema(TypeModel typeModel) {
+  private String jsonSchema() {
     try {
-      Class schemaClass = Class.forName(typeModel.getQualifiedName());
+      Class schemaClass = Class.forName(this.targetClassName);
 
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(SerializationFeature.WRITE_ENUMS_USING_TO_STRING, true);
