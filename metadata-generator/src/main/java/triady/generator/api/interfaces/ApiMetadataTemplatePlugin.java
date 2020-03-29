@@ -8,10 +8,8 @@ import compozitor.generator.core.interfaces.Namespace;
 import compozitor.generator.core.interfaces.TemplateMetadata;
 import compozitor.generator.core.interfaces.TemplateRepository;
 import compozitor.template.core.interfaces.TemplateEngine;
-import triady.generator.context.interfaces.ContextMetadata;
-import triady.generator.context.interfaces.ContextMetadataCategory;
 
-public abstract class ApiMetadataProcessorPlugins implements TypeModelPlugin<ApiMetadata>, TemplatePlugin {
+public abstract class ApiMetadataTemplatePlugin implements TemplatePlugin {
 
   @Override
   public final void accept(TemplateEngine templateEngine, TemplateRepository templateRepository) {
