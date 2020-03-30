@@ -17,7 +17,7 @@ public abstract class Metadata<M extends TemplateContextData<M>> implements Temp
     this.collection = collection;
     this.name = name;
     this.description = description;
-    this.id = Id.create(collection.namespace(), name);
+    this.id = Id.create(this.collection.namespace(), name);
   }
 
   public Namespace getNamespace(){

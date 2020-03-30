@@ -19,6 +19,10 @@ public class ApiMetadata extends Metadata<ApiMetadata> {
     this.swaggerFile = swaggerFile;
   }
 
+  public static ApiMetadata create(Name name){
+    return create(name, null, null, null);
+  }
+
   public static ApiMetadata create(Name name, Description description, GraphQLFile graphQLFile, SwaggerFile swaggerFile) {
     return create(name, description, graphQLFile, swaggerFile);
   }

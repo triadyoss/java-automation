@@ -7,7 +7,6 @@ import triady.generator.core.interfaces.JsonSchema;
 import triady.generator.core.interfaces.Metadata;
 import triady.generator.core.interfaces.Name;
 import triady.generator.module.interfaces.ModuleMetadata;
-import triady.generator.schema.interfaces.SchemaMetadata;
 
 @Getter
 public class TableMetadata extends Metadata<TableMetadata> {
@@ -18,6 +17,10 @@ public class TableMetadata extends Metadata<TableMetadata> {
     super(Collection.TABLE, name, description);
     this.module = module;
     this.jsonSchema = jsonSchema;
+  }
+
+  public static TableMetadata create(Name name){
+    return create(null, null, name, null);
   }
 
   public static TableMetadata create(ModuleMetadata module, JsonSchema jsonSchema, Name name, Description description) {

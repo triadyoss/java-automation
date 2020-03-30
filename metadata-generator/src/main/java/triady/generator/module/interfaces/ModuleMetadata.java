@@ -24,6 +24,10 @@ public class ModuleMetadata extends Metadata<ModuleMetadata> {
     this.producesTopics = producesTopics;
   }
 
+  public static ModuleMetadata create(Name name){
+    return create(null, name, null, null, null);
+  }
+
   public static ModuleMetadata create(ContextMetadata context, Name name, Description description, ConsumesTopics consumesTopics, ProducesTopics producesTopics) {
     return new ModuleMetadata(context, name, description, consumesTopics, producesTopics);
   }

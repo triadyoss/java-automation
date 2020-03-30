@@ -1,6 +1,7 @@
 package triady.generator.context.interfaces;
 
 import compozitor.engine.core.interfaces.ProcessorPlugin;
+import compozitor.engine.core.interfaces.TypeModelPlugin;
 import compozitor.processor.core.interfaces.AnnotationModel;
 import compozitor.processor.core.interfaces.AnnotationRepository;
 import compozitor.processor.core.interfaces.JavaModel;
@@ -14,29 +15,18 @@ import java.util.Collection;
 import java.util.function.Predicate;
 
 @ProcessorPlugin
-public class ContextSpecificationProcessorPlugins extends ContextMetadataTemplatePlugin {
-
+public class ContextSpecificationProcessorPlugins extends ContextMetadataTemplatePlugin implements TypeModelPlugin<ContextMetadata> {
 
   @Override
-  public Collection<ContextMetadata> accept(ProcessingContext context, AnnotationRepository annotationRepository) {
+  public ContextMetadata accept(ProcessingContext context, TypeModel typeModel) {
     Predicate<AnnotationModel> specificationPredicate = getSpecificationPredicate(context.getJavaModel());
-    Collection<ContextMetadata> collection = new ArrayList<>();
 
-    annotationRepository.elementsAnnotatedWith(context.getTypeElement(ContextSpecification.class.getName()))
-      .forEach((annotation, elements) ->{
-        elements.forEach(element -> {
-          TypeModel contextModel = context.getJavaModel().getClass(element);
+    AnnotationModel annotationModel = typeModel.getAnnotations().get(specificationPredicate).get();
 
-          AnnotationModel annotationModel = contextModel.getAnnotations().get(specificationPredicate).get();
+    Name name = Name.create(annotationModel.value("name"));
+    Description description = Description.create(annotationModel.value("description"));
 
-          Name name = Name.create(annotationModel.value("name"));
-          Description description = Description.create(annotationModel.value("description"));
-
-          collection.add(ContextMetadata.create(name, description));
-        });
-      });
-
-    return collection;
+    return ContextMetadata.create(name, description);
   }
 
   private static Predicate<AnnotationModel> getSpecificationPredicate(final JavaModel javaModel) {

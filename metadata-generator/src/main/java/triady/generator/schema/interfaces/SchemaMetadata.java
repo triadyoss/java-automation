@@ -20,6 +20,10 @@ public class SchemaMetadata extends Metadata<SchemaMetadata> {
     this.jsonSchema = jsonSchema;
   }
 
+  public static SchemaMetadata create(Name name){
+    return create(null, name, null, null);
+  }
+
   public static SchemaMetadata create(ContextMetadata context, Name name, Description description, JsonSchema jsonSchema) {
     return new SchemaMetadata(context, name, description, jsonSchema);
   }

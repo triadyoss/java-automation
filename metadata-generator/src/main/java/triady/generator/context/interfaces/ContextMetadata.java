@@ -10,6 +10,10 @@ public class ContextMetadata extends Metadata<ContextMetadata> {
     super(Collection.CONTEXT, name, description);
   }
 
+  public static ContextMetadata create(Name name){
+    return create(name, null);
+  }
+
   public static ContextMetadata create(Name name, Description description) {
     return new ContextMetadata(name, description);
   }

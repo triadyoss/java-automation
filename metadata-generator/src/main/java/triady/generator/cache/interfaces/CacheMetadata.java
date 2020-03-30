@@ -22,6 +22,10 @@ public class CacheMetadata extends Metadata<CacheMetadata> {
     this.jsonSchema = jsonSchema;
   }
 
+  public static CacheMetadata create(Name name){
+    return create(null, null, null, name, null);
+  }
+
   public static CacheMetadata create(ModuleMetadata module, SchemaMetadata schema, JsonSchema jsonSchema, Name name, Description description) {
     return new CacheMetadata(module, schema, jsonSchema, name, description);
   }

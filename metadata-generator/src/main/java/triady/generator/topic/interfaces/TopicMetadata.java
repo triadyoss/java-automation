@@ -18,6 +18,10 @@ public class TopicMetadata extends Metadata<TopicMetadata> {
     this.schema = schema;
   }
 
+  public static TopicMetadata create(Name name){
+    return create(null, name, null);
+  }
+
   public static TopicMetadata create(SchemaMetadata schema, Name name, Description description) {
     return new TopicMetadata(schema, name, description);
   }
