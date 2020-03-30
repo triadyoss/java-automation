@@ -1,25 +1,26 @@
 package triady.generator.topic.interfaces;
 
-import triady.generator.core.interfaces.Id;
-
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TopicCollection implements Iterable<TopicMetadata> {
-  private Set<TopicMetadata> topics;
+  private List<TopicMetadata> topics;
 
   public TopicCollection() {
-    this.topics = new HashSet<>();
+    this.topics = new ArrayList<>();
   }
 
   public void add(TopicMetadata topic){
     this.topics.add(topic);
+  }
+
+  public void addAll(Collection<TopicMetadata> topics) {
+    this.topics.addAll(topics);
   }
 
   public Optional<TopicMetadata> contains(TopicMetadata topic){
