@@ -1,18 +1,21 @@
 package triady.generator.topic.interfaces;
 
+import com.google.common.collect.Sets;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TopicCollection implements Iterable<TopicMetadata> {
-  private List<TopicMetadata> topics;
+  private Set<TopicMetadata> topics;
 
   public TopicCollection() {
-    this.topics = new ArrayList<>();
+    this.topics = Sets.newHashSet();
   }
 
   public void add(TopicMetadata topic){
