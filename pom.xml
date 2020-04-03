@@ -26,7 +26,7 @@
   </properties>
 
   <modules>
-    <module>metadata-generator</module>
+    <module>metadata-generator-api</module>
   </modules>
 
   <dependencyManagement>
@@ -34,7 +34,7 @@
       <!-- TRIADY -->
       <dependency>
         <groupId>org.archmix.triady</groupId>
-        <artifactId>metadata-generator</artifactId>
+        <artifactId>metadata-generator-api</artifactId>
         <version>${triadyVersion}</version>
       </dependency>
       <!-- JACKSON -->

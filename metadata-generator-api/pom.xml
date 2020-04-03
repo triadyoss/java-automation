@@ -9,7 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>metadata-generator</artifactId>
+  <artifactId>metadata-generator-api</artifactId>
 
   <name>Triady Metadata Generator</name>
   <description>This generator provides apis to get metadata files generated for Triady Governance.</description>
