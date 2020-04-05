@@ -1,6 +1,7 @@
 package triady.generator.core.interfaces;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import java.nio.file.Path;
@@ -10,6 +11,7 @@ import java.nio.file.Paths;
 public abstract class Resource {
   private final String path;
 
+  @Getter
   private final Id id;
 
   public Path getPath(){

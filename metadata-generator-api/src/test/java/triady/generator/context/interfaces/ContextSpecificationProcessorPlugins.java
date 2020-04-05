@@ -19,21 +19,11 @@ public class ContextSpecificationProcessorPlugins extends ContextMetadataTemplat
 
   @Override
   public ContextMetadata accept(ProcessingContext context, TypeModel typeModel) {
-    Predicate<AnnotationModel> specificationPredicate = getSpecificationPredicate(context.getJavaModel());
-
-    AnnotationModel annotationModel = typeModel.getAnnotations().get(specificationPredicate).get();
+    AnnotationModel annotationModel = typeModel.getAnnotations().getBy(ContextSpecification.class).get();
 
     Name name = Name.create(annotationModel.value("name"));
     Description description = Description.create(annotationModel.value("description"));
 
     return ContextMetadata.create(name, description);
-  }
-
-  private static Predicate<AnnotationModel> getSpecificationPredicate(final JavaModel javaModel) {
-    return (annotation) -> annotation.equals(getSpecification(javaModel));
-  }
-
-  private static TypeModel getSpecification(final JavaModel javaModel) {
-    return javaModel.getType(ContextSpecification.class.getName());
   }
 }

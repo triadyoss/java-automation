@@ -5,5 +5,5 @@ cacheDescription: "${Cache.Description}"
 #if($Cache.schemaBased())
 schemaId: "${Cache.Schema.Id}"
 #else
-schemaFile: "${Cache.JsonSchema.Path}"
+schemaFile: "${Cache.CacheSchema.Path}"
 #end

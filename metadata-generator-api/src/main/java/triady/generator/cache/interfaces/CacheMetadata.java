@@ -13,21 +13,21 @@ import triady.generator.schema.interfaces.SchemaMetadata;
 public class CacheMetadata extends Metadata<CacheMetadata> {
   private final ModuleMetadata module;
   private final SchemaMetadata schema;
-  private final JsonSchema jsonSchema;
+  private final JsonSchema cacheSchema;
 
-  private CacheMetadata(ModuleMetadata module, SchemaMetadata schema, JsonSchema jsonSchema, Name name, Description description) {
+  private CacheMetadata(ModuleMetadata module, SchemaMetadata schema, JsonSchema cacheSchema, Name name, Description description) {
     super(Collection.CACHE, name, description);
     this.module = module;
     this.schema = schema;
-    this.jsonSchema = jsonSchema;
+    this.cacheSchema = cacheSchema;
   }
 
   public static CacheMetadata create(Name name){
     return create(null, null, null, name, null);
   }
 
-  public static CacheMetadata create(ModuleMetadata module, SchemaMetadata schema, JsonSchema jsonSchema, Name name, Description description) {
-    return new CacheMetadata(module, schema, jsonSchema, name, description);
+  public static CacheMetadata create(ModuleMetadata module, SchemaMetadata schema, JsonSchema cacheSchema, Name name, Description description) {
+    return new CacheMetadata(module, schema, cacheSchema, name, description);
   }
 
   public boolean schemaBased(){
