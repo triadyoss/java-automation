@@ -1,5 +1,6 @@
 package triady.generator.core.interfaces;
 
+import compozitor.generator.core.interfaces.Namespace;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -7,14 +8,18 @@ import lombok.RequiredArgsConstructor;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@RequiredArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
 public abstract class Resource {
-  private final String path;
+  private final Namespace namespace;
 
-  @Getter
   private final Id id;
 
+  protected Resource(String path, Id id){
+    this.namespace = Namespace.create(Paths.get(path));
+    this.id = id;
+  }
+
   public Path getPath(){
-    return Paths.get(this.path, this.id.toString());
+    return Paths.get(this.namespace.toPath().toString(), this.id.toString());
   }
 }
