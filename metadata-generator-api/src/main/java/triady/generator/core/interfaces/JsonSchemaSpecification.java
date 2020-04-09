@@ -39,7 +39,7 @@ public class JsonSchemaSpecification extends Resource {
     return Paths.get(endpoint);
   }
 
-  @RequiredArgsConstructor(staticName = "create")
+  @RequiredArgsConstructor
   @Getter
   public class SchemaProperty {
     private final String key;

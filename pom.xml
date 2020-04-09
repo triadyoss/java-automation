@@ -21,7 +21,7 @@
 
   <properties>
     <triadyVersion>0.0.1-SNAPSHOT</triadyVersion>
-    <compozitorVersion>0.1.3-SNAPSHOT</compozitorVersion>
+    <compozitorVersion>0.1.4</compozitorVersion>
     <jacksonVersion>2.10.3</jacksonVersion>
   </properties>
 
