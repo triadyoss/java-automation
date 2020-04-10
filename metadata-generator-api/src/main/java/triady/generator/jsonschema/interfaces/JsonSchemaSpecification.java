@@ -1,14 +1,16 @@
-package triady.generator.core.interfaces;
+package triady.generator.jsonschema.interfaces;
 
 import compozitor.processor.core.interfaces.TypeModel;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import triady.generator.core.interfaces.Id;
+import triady.generator.core.interfaces.Resource;
+import triady.generator.core.interfaces.TriadySettings;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonSchemaSpecification extends Resource {
@@ -21,7 +23,7 @@ public class JsonSchemaSpecification extends Resource {
 
   public JsonSchemaSpecification(Id id) {
     super(PATH.toString(), id);
-    this.properties = Arrays.asList();
+    this.properties = new ArrayList<>();
   }
 
   public static JsonSchemaSpecification create(TypeModel typeModel) {

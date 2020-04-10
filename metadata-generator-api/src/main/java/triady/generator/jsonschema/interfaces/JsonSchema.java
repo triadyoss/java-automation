@@ -1,10 +1,10 @@
-package triady.generator.core.interfaces;
+package triady.generator.jsonschema.interfaces;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchemaGenerator;
-import triady.generator.core.interfaces.JsonSchemaSpecification.SchemaProperty;
+import triady.generator.core.interfaces.Json;
+import triady.generator.jsonschema.interfaces.JsonSchemaSpecification.SchemaProperty;
 
 import java.util.HashMap;
 import java.util.List;

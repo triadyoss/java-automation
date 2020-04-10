@@ -3,7 +3,7 @@ package triady.generator.cache.interfaces;
 import lombok.Getter;
 import triady.generator.core.interfaces.Collection;
 import triady.generator.core.interfaces.Description;
-import triady.generator.core.interfaces.JsonSchemaSpecification;
+import triady.generator.jsonschema.interfaces.JsonSchemaSpecification;
 import triady.generator.core.interfaces.Metadata;
 import triady.generator.core.interfaces.Name;
 import triady.generator.module.interfaces.ModuleMetadata;

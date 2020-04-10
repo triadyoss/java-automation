@@ -2,7 +2,7 @@ package triady.generator.cache.interfaces;
 
 import compozitor.processor.core.interfaces.TypeModel;
 import triady.generator.core.interfaces.Id;
-import triady.generator.core.interfaces.JsonSchemaSpecification;
+import triady.generator.jsonschema.interfaces.JsonSchemaSpecification;
 
 public class CacheSchemaFactory {
 
