@@ -11,7 +11,7 @@
 
   <groupId>org.archmix.triady</groupId>
   <artifactId>java-automation</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
   <packaging>pom</packaging>
 
   <name>Triady Automation for Java Developers</name>
@@ -19,7 +19,7 @@
   <url>https://triady.archmix.org</url>
 
   <properties>
-    <triadyVersion>0.0.2-SNAPSHOT</triadyVersion>
+    <triadyVersion>0.0.2</triadyVersion>
     <compozitorVersion>0.1.6</compozitorVersion>
     <jacksonVersion>2.10.3</jacksonVersion>
   </properties>
@@ -70,7 +70,7 @@
   <scm>
     <connection>scm:git:git://github.com/triadyoss/${project.artifactId}.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/triadyoss/${project.artifactId}.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v0.0.2</tag>
     <url>https://github.com/triadyoss</url>
   </scm>
 
