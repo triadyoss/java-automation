@@ -21,7 +21,7 @@ public class JsonSchemaSpecification extends Resource {
   @Getter(value = AccessLevel.PACKAGE)
   private final List<SchemaProperty> properties;
 
-  public JsonSchemaSpecification(Id id) {
+  protected JsonSchemaSpecification(Id id) {
     super(PATH.toString(), id);
     this.properties = new ArrayList<>();
   }

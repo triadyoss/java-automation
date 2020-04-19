@@ -1,0 +1,11 @@
+---
+moduleId: "${Endpoint.Module.Id}"
+endpointName: "${Endpoint.Name}"
+endpointDescription: "${Endpoint.Description}"
+endpointUri: "${Endpoint.Uri}"
+endpointMethod: "${Endpoint.Method}"
+endpointStatusCodes: ${Endpoint.StatusCodes}
+endpointGraphQLFile: "${Endpoint.GraphQLFile.Path}"
+endpointRequestFile: "${Endpoint.RequestFile.Path}"
+endpointResponseFile: "${Endpoint.ResponseFile.Path}"
+endpointErrorResponseFile: "${Endpoint.ErrorResponseFile.Path}"

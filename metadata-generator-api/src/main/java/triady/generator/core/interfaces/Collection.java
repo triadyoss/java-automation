@@ -5,18 +5,18 @@ import compozitor.generator.core.interfaces.Namespace;
 import java.nio.file.Paths;
 
 public enum Collection {
-  API{
+  ENDPOINT {
     @Override
     protected String key() {
-      return "_apis";
+      return "_endpoints";
     }
 
     @Override
     public String templateKey() {
-      return "Api";
+      return "Endpoint";
     }
   },
-  CACHE{
+  CACHE {
     @Override
     protected String key() {
       return "_caches";
@@ -27,7 +27,7 @@ public enum Collection {
       return "Cache";
     }
   },
-  CONTEXT{
+  CONTEXT {
     @Override
     protected String key() {
       return "_contexts";
@@ -38,7 +38,7 @@ public enum Collection {
       return "Context";
     }
   },
-  MODULE{
+  MODULE {
     @Override
     protected String key() {
       return "_modules";
@@ -49,7 +49,7 @@ public enum Collection {
       return "Module";
     }
   },
-  SCHEMA{
+  SCHEMA {
     @Override
     protected String key() {
       return "_schemas";
@@ -60,7 +60,7 @@ public enum Collection {
       return "Schema";
     }
   },
-  TABLE{
+  TABLE {
     @Override
     protected String key() {
       return "_tables";
@@ -71,7 +71,7 @@ public enum Collection {
       return "Table";
     }
   },
-  TOPIC{
+  TOPIC {
     @Override
     protected String key() {
       return "_topics";
