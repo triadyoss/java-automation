@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.archmix.triady</groupId>
     <artifactId>java-automation</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>metadata-generator-api</artifactId>
