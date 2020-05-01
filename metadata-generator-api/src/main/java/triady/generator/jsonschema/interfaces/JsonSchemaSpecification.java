@@ -15,6 +15,7 @@ import java.util.List;
 
 public class JsonSchemaSpecification extends Resource {
   private static final Path PATH = Paths.get(TriadySettings.DATA_DIRECTORY, "json-schemas/");
+  private static final Empty EMPTY = new Empty();
 
   protected static final String VALUE = "value";
 
@@ -24,6 +25,10 @@ public class JsonSchemaSpecification extends Resource {
   protected JsonSchemaSpecification(Id id) {
     super(PATH.toString(), id);
     this.properties = new ArrayList<>();
+  }
+
+  public static JsonSchemaSpecification empty() {
+    return EMPTY;
   }
 
   public static JsonSchemaSpecification create(TypeModel typeModel) {
@@ -46,5 +51,16 @@ public class JsonSchemaSpecification extends Resource {
   public class SchemaProperty {
     private final String key;
     private final String value;
+  }
+
+  static class Empty extends JsonSchemaSpecification {
+    protected Empty() {
+      super(Id.create());
+    }
+
+    @Override
+    public Path getPath() {
+      return Paths.get("");
+    }
   }
 }
