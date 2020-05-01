@@ -1,6 +1,6 @@
 package triady.generator.context.interfaces;
 
-import triady.generator.context.interfaces.ContextSpecification;
+import contextSpecificationProcessorTest.ContextSpecification;
 
 @ContextSpecification(
   name = "Context",

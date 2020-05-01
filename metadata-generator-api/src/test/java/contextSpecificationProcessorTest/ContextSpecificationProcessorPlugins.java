@@ -1,18 +1,14 @@
-package triady.generator.context.interfaces;
+package contextSpecificationProcessorTest;
 
 import compozitor.engine.core.interfaces.ProcessorPlugin;
 import compozitor.engine.core.interfaces.TypeModelPlugin;
 import compozitor.processor.core.interfaces.AnnotationModel;
-import compozitor.processor.core.interfaces.AnnotationRepository;
-import compozitor.processor.core.interfaces.JavaModel;
 import compozitor.processor.core.interfaces.ProcessingContext;
 import compozitor.processor.core.interfaces.TypeModel;
+import triady.generator.context.interfaces.ContextMetadata;
+import triady.generator.context.interfaces.ContextMetadataTemplatePlugin;
 import triady.generator.core.interfaces.Description;
 import triady.generator.core.interfaces.Name;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.function.Predicate;
 
 @ProcessorPlugin
 public class ContextSpecificationProcessorPlugins extends ContextMetadataTemplatePlugin implements TypeModelPlugin<ContextMetadata> {

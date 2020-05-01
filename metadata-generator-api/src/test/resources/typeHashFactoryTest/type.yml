@@ -1,0 +1,11 @@
+stringValue: "String"
+innerType:
+  type:
+    stringValue: "String"
+    integerValue: "Integer"
+typeWithEnum:
+  type:
+    enumValue:
+    - "ONE"
+    - "TWO"
+    - "THREE"

@@ -20,7 +20,7 @@
 
   <properties>
     <triadyVersion>0.0.4-SNAPSHOT</triadyVersion>
-    <compozitorVersion>0.1.9-SNAPSHOT</compozitorVersion>
+    <compozitorVersion>0.1.10-SNAPSHOT</compozitorVersion>
     <jacksonVersion>2.10.3</jacksonVersion>
   </properties>
 
@@ -36,6 +36,7 @@
         <artifactId>metadata-generator-api</artifactId>
         <version>${triadyVersion}</version>
       </dependency>
+
       <!-- JACKSON -->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -53,8 +54,13 @@
         <version>${jacksonVersion}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-jsonSchema</artifactId>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr310</artifactId>
         <version>${jacksonVersion}</version>
       </dependency>
 

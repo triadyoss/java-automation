@@ -5,7 +5,7 @@ endpointDescription: "${Endpoint.Description}"
 endpointUri: "${Endpoint.Uri}"
 endpointMethod: "${Endpoint.Method}"
 endpointStatusCodes: ${Endpoint.StatusCodes}
-endpointGraphQLFile: "${Endpoint.GraphQLFile.Path}"
+endpointGraphQLFile: "${Endpoint.graphQLFile.Path}"
 endpointRequestFile: "${Endpoint.RequestFile.Path}"
 endpointResponseFile: "${Endpoint.ResponseFile.Path}"
 endpointErrorResponseFile: "${Endpoint.ErrorResponseFile.Path}"

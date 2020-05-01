@@ -1,4 +1,4 @@
-package triady.generator.context.interfaces;
+package contextSpecificationProcessorTest;
 
 import compozitor.processor.core.interfaces.CompilationBuilder;
 import compozitor.processor.core.interfaces.CompileAssertion;

@@ -1,4 +1,4 @@
-package triady.generator.context.interfaces;
+package contextSpecificationProcessorTest;
 
 public @interface ContextSpecification {
   String name();

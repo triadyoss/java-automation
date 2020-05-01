@@ -1,8 +1,10 @@
-package triady.generator.context.interfaces;
+package contextSpecificationProcessorTest;
 
 import com.google.common.collect.Sets;
 import compozitor.engine.core.interfaces.ProcessorEngine;
 import compozitor.generator.core.interfaces.CodeGenerationCategory;
+import triady.generator.context.interfaces.ContextMetadata;
+import triady.generator.context.interfaces.ContextMetadataCategory;
 
 import java.util.Set;
 
