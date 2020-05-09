@@ -12,7 +12,7 @@ workflows:
       - maven/release:
           context: Triady
           requires:
-            - build
+            - maven/build
           filters:
             branches:
               only: master
