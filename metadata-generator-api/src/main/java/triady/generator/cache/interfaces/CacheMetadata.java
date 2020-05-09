@@ -13,23 +13,23 @@ import triady.generator.type.interfaces.TypeSpecification;
 public class CacheMetadata extends Metadata<CacheMetadata> {
   private final ModuleMetadata module;
   private final SchemaMetadata schema;
-  private final TypeSpecification typeSpecification;
+  private final TypeSpecification type;
 
   private CacheMetadata(ModuleMetadata module, SchemaMetadata schema,
-                        TypeSpecification typeSpecification, Name name,
+                        TypeSpecification type, Name name,
                         Description description) {
     super(Collection.CACHE, name, description);
     this.module = module;
     this.schema = schema;
-    this.typeSpecification = typeSpecification;
+    this.type = type;
   }
 
   public static CacheMetadata create(Name name){
     return create(null, null, null, name, null);
   }
 
-  public static CacheMetadata create(ModuleMetadata module, SchemaMetadata schema, TypeSpecification typeSpecification, Name name, Description description) {
-    return new CacheMetadata(module, schema, typeSpecification, name, description);
+  public static CacheMetadata create(ModuleMetadata module, SchemaMetadata schema, TypeSpecification type, Name name, Description description) {
+    return new CacheMetadata(module, schema, type, name, description);
   }
 
   public boolean schemaBased(){

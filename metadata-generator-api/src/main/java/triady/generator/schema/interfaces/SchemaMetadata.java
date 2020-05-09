@@ -12,19 +12,19 @@ import triady.generator.type.interfaces.TypeSpecification;
 public class SchemaMetadata extends Metadata<SchemaMetadata> {
   private static final String NAMESPACE = "metadata._schemas";
   private final ContextMetadata context;
-  private final TypeSpecification typeSpecification;
+  private final TypeSpecification type;
 
-  private SchemaMetadata (ContextMetadata context, Name name, Description description, TypeSpecification jsonSchema) {
+  private SchemaMetadata (ContextMetadata context, Name name, Description description, TypeSpecification type) {
     super(Collection.SCHEMA, name, description);
     this.context = context;
-    this.typeSpecification = jsonSchema;
+    this.type = type;
   }
 
   public static SchemaMetadata create(Name name){
     return create(null, name, null, null);
   }
 
-  public static SchemaMetadata create(ContextMetadata context, Name name, Description description, TypeSpecification typeSpecification) {
-    return new SchemaMetadata(context, name, description, typeSpecification);
+  public static SchemaMetadata create(ContextMetadata context, Name name, Description description, TypeSpecification type) {
+    return new SchemaMetadata(context, name, description, type);
   }
 }

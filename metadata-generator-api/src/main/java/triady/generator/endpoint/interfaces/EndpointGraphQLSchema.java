@@ -20,7 +20,7 @@ public class EndpointGraphQLSchema extends Resource {
     this.path = path;
   }
 
-  public static EndpointGraphQLSchema empty(){
+  public static EndpointGraphQLSchema create(){
     return EMPTY;
   }
 

@@ -44,6 +44,11 @@ public class TypeSpecification extends Resource {
     return new TypeSpecification(id, typeHash, false);
   }
 
+  public Path getEndpoint() {
+    String endpoint = this.getPath().toString().replace("src", "");
+    return Paths.get(endpoint);
+  }
+
   public void generate(ProcessingContext context) {
     if (this.undefined) {
       return;

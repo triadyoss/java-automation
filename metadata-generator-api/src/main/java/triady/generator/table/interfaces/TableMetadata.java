@@ -11,19 +11,19 @@ import triady.generator.type.interfaces.TypeSpecification;
 @Getter
 public class TableMetadata extends Metadata<TableMetadata> {
   private final ModuleMetadata module;
-  private final TypeSpecification typeSpecification;
+  private final TypeSpecification type;
 
-  private TableMetadata(ModuleMetadata module, TypeSpecification typeSpecification, Name name, Description description) {
+  private TableMetadata(ModuleMetadata module, TypeSpecification type, Name name, Description description) {
     super(Collection.TABLE, name, description);
     this.module = module;
-    this.typeSpecification = typeSpecification;
+    this.type = type;
   }
 
   public static TableMetadata create(Name name){
     return create(null, null, name, null);
   }
 
-  public static TableMetadata create(ModuleMetadata module, TypeSpecification typeSpecification, Name name, Description description) {
-    return new TableMetadata(module, typeSpecification, name, description);
+  public static TableMetadata create(ModuleMetadata module, TypeSpecification type, Name name, Description description) {
+    return new TableMetadata(module, type, name, description);
   }
 }
