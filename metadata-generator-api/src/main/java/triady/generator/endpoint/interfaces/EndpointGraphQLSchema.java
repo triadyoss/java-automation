@@ -28,6 +28,11 @@ public class EndpointGraphQLSchema extends Resource {
     return new EndpointGraphQLSchema(Id.create(pathToFile), pathToFile);
   }
 
+  public Path getEndpoint() {
+    String endpoint = this.getPath().toString().replace("src", "");
+    return Paths.get(endpoint);
+  }
+
   static class Empty extends EndpointGraphQLSchema {
     public Empty() {
       super(Id.create(), null);

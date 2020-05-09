@@ -49,21 +49,15 @@ public class TypeSpecification extends Resource {
     return Paths.get(endpoint);
   }
 
-  public void generate(ProcessingContext context) {
-    if (this.undefined) {
-      return;
-    }
+  public Boolean undefined() {
+    return undefined;
+  }
 
-    try {
-      JavaFiles files = context.getJavaFiles();
+  public String toYaml(){
+    return this.typeHash.toYaml();
+  }
 
-      JavaResource javaResource = JavaResources.create(ResourceName.create(this.getPath().toString()));
-      FileObject file = files.resourceFile(javaResource);
-      try (Writer writer = file.openWriter()) {
-        writer.write(this.typeHash.toYaml());
-      }
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
+  public String toString(){
+    return this.toYaml();
   }
 }
